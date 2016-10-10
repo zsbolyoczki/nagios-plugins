@@ -7,8 +7,8 @@
 #
 #	required packages: curl, openssl
 #
-#
-# usage: check_https_expiry_date.sh hostname
+# Runs on: nagios server
+# Usage: check_https_expiry_date.sh hostname
 #
 # zsbolyoczki - 2016.09.26.
 #
