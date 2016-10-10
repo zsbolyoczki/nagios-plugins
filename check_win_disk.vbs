@@ -1,6 +1,6 @@
 '
-' Checks all local disks and returns usage status 
-' based on limits given as arg1 (warning) and arg2 (critical)
+' Checks all local disks and returns usage in percentage.
+' Alerting is based on limits given as arg1 (warning) and arg2 (critical).
 '
 ' zsbolyoczki - 2016.10.10.
 '
