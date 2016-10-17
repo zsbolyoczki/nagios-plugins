@@ -8,6 +8,8 @@
 #
 # the original nagios plugin returns all disks statuses regardless of their real status
 #
+# Important: df has to support "--output" parameter
+#
 
 
 if [ $# -ne 2 ]; then
