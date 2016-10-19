@@ -19,6 +19,6 @@ if [ $# -ne 2 ]; then
 
 else
 
-	df -lh --output='target,used,size,pcent' | egrep "^/" | sed 's/%//g' | sort -n -k4 | tail -n1 | awk -v W=${1} -v C=${2} '{ if ($NF>C) { print "CRITICAL: "$1,$NF"% ("$2"/"$3")"; RC=2 } else if ($NF>W) { print "Warning: "$1,$NF"% ("$2"/"$3")"; RC=1 } else { print "All disks are OK"; RC=0;}} END {exit RC}'
+	df -lh --output='target,used,size,pcent' | egrep "^/" | sed 's/%//g' | sort -n -k4 | tail -n1 | awk -v W=${1} -v C=${2} '{ if ($NF>=C) { print "CRITICAL: "$1,$NF"% ("$2"/"$3")"; RC=2 } else if ($NF>=W) { print "Warning: "$1,$NF"% ("$2"/"$3")"; RC=1 } else { print "All disks are OK"; RC=0;}} END {exit RC}'
 
 fi
