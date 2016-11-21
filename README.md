@@ -1,2 +1,1 @@
-# nagios-plugins
-Plugins for Nagios
+# Plugins for Nagios
